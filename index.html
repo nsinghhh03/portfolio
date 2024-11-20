@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  
+  <!-- Font Link -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Embedded CSS -->
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-image: url('img/backgroundpic.png');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .container {
+      text-align: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    /* Navbar */
+    nav {
+      position: absolute;
+      top: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .navbar li {
+      margin: 0 30px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      font-size: 1.4rem;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #00bfff;
+    }
+
+    /* Hero Section */
+    .hero {
+      margin-top: -30px;
+    }
+
+    .bubble {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 20px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      margin-bottom: 0px; /* Adjusted to align above the name */
+      transform: translateY(50px);
+    }
+
+    .bubble .pulse {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background: #00ff00;
+      border-radius: 50%;
+      animation: pulse 1.5s infinite;
+      margin-right: 8px;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.3);
+        opacity: 0.7;
+      }
+    }
+
+    .main-title {
+      font-size: 6rem;
+      font-weight: 600;
+      letter-spacing: 0.5rem;
+      margin-bottom: 20px;
+    }
+
+    .subtitle {
+      font-size: 2rem;
+      color: #9B9BA0;
+      margin-bottom: 40px;
+    }
+
+    .dynamic-text {
+      color: #9B9BA0;
+      font-weight: 400;
+    }
+
+    .cta-btn {
+      background: rgba(47, 45, 65, 0.8);
+      color: white;
+      border: none;
+      padding: 15px 40px;
+      border-radius: 25px;
+      font-size: 1.2rem;
+      font-family: 'Quicksand', sans-serif;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .cta-btn:hover {
+      background: rgba(47, 45, 65, 1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Navbar -->
+    <nav>
+      <ul class="navbar">
+        <li><a href="work.html">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="bubble">
+        <span class="pulse"></span> Open for Work
+      </div>
+      <h1 class="main-title">Neeza Singh</h1>
+      <p class="subtitle">I am a... <span class="dynamic-text"></span></p>
+      <a href="NeezaSingh24Resume.pdf" target="_blank" class="cta-btn">Download Resume</a>
+    </section>
+  </div>
+
+  <!-- Embedded JavaScript -->
+  <script>
+    // Dynamic Typewriter Effect
+    const roles = ['UI Designer', 'Product Manager', 'AI Enthusiast'];
+    let roleIndex = 0;
+    let charIndex = 0;
+    const dynamicTextElement = document.querySelector('.dynamic-text');
+
+    function typeWriter() {
+      if (charIndex < roles[roleIndex].length) {
+        dynamicTextElement.textContent += roles[roleIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(typeWriter, 150);
+      } else {
+        setTimeout(eraseText, 1000);
+      }
+    }
+
+    function eraseText() {
+      if (charIndex > 0) {
+        dynamicTextElement.textContent = roles[roleIndex].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(eraseText, 100);
+      } else {
+        roleIndex = (roleIndex + 1) % roles.length;
+        setTimeout(typeWriter, 500);
+      }
+    }
+
+    // Start Typewriter Effect
+    document.addEventListener('DOMContentLoaded', () => {
+      typeWriter();
+    });
+  </script>
+</body>
+</html>
