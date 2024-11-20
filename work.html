@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work</title>
+
+  <!-- Font Link -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Embedded CSS -->
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: black;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      background: black;
+      padding: 15px 0;
+      z-index: 1000;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .navbar li {
+      margin: 0 30px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      font-size: 1.4rem;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #00bfff;
+    }
+
+    /* Back Arrow Button */
+    .back-button {
+      position: fixed;
+      top: 15px;
+      left: 20px;
+      font-size: 2rem; /* Make it larger */
+      color: white;
+      text-decoration: none;
+      z-index: 1100; /* Ensure it is always on top */
+      transition: color 0.3s;
+    }
+
+    .back-button:hover {
+      color: #00bfff; /* Hover color */
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .selected-text {
+      font-size: 8rem; /* Adjusted font size for "Selected" */
+      font-weight: 400;
+      color: grey;
+      margin: 0;
+      animation: floatUp 1.5s ease-out forwards;
+    }
+
+    .work-text {
+      font-size: 8rem; /* Adjusted font size for "work" */
+      font-weight: 600;
+      color: white;
+      margin: 0;
+      animation: floatUp 1.5s ease-out forwards;
+      animation-delay: 0.9s; /* Slight delay for staggered effect */
+    }
+
+    @keyframes floatUp {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* Work Experience Section */
+    .work-experiences {
+      padding: 50px;
+    }
+
+    .work-item {
+      margin-bottom: 50px;
+      animation: fadeIn 1.5s ease-out;
+      opacity: 0;
+      animation-fill-mode: forwards;
+    }
+
+    .work-item:nth-child(1) { animation-delay: 0.3s; }
+    .work-item:nth-child(2) { animation-delay: 0.6s; }
+    .work-item:nth-child(3) { animation-delay: 0.9s; }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .horizontal-line {
+      height: 1px;
+      background: grey;
+      opacity: 0.5;
+      margin: 40px 0;
+    }
+
+    .company {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #6466F1; /* Purple color for the side labels */
+    }
+
+    .role,
+    .year {
+      font-size: 1rem;
+      color: #9B9BA0;
+      margin-top: 5px;
+    }
+
+    .description {
+      margin-top: 15px;
+      line-height: 1.6;
+    }
+
+    .see-product {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #6466F1; /* Purple button */
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .see-product:hover {
+      background: #8091FF; /* Lighter purple hover effect */
+    }
+  </style>
+</head>
+<body>
+  <!-- Back Button -->
+  <a href="index.html" class="back-button">&larr;</a> <!-- Unicode Left Arrow -->
+
+  <!-- Navbar -->
+  <nav>
+    <ul class="navbar">
+      <li><a href="index.html">Work</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1 class="selected-text">Selected</h1>
+    <h1 class="work-text">Work</h1>
+  </section>
+
+  <!-- Work Experiences -->
+  <section class="work-experiences">
+    <div class="work-item">
+      <div class="company">Accenture Song</div>
+      <div class="role">Business Architect</div>
+      <div class="year">June 2024 - August 2024</div>
+      <p class="description">
+        As a <b>Business Architecture Analyst</b> at Accenture Song, I worked on a groundbreaking campaign for a leading client in the food & beverage industry, enabling users to create AI-generated personalized images through DALL-E</b>, which could be shared directly on social media. I helped develop and implement robust data metrics to track the campaign's effectiveness, driving a ~25% increase in social media engagement. Leveraging tools like A/B Testing</b>, Google Analytics</b>, and Looker</b>, I conducted extensive user research to uncover content creation behaviors, translating insights into product features that encouraged user-generated content submissions. Collaborating with creative teams using Adobe Creative Cloud and engineering teams leveraging REST APIs, I ensured seamless integration of user-generated AI content, creating a highly interactive and engaging social media experience.
+      </p>
+    </div>
+    <div class="horizontal-line"></div>
+
+    <div class="work-item">
+      <div class="company">TCube Inc.</div>
+      <div class="role">Product Manager</div>
+      <div class="year">December 2022 - Present</div>
+      <p class="description">
+        As an <b>AI Product Manager</b> at TCube Inc., I spearheaded the development of a cutting-edge Chatbot tailored for the supply chain technology startup, integrating advanced reinforcement</b> learning</b>, speech</b> recognition</b> algorithms</b>, and NLP</b> capabilities</b>. Leading a team of five, I oversee UI/UX design planning for analytics and help features, and I actively manage wide-scale testing to refine program performance. Currently, I’m guiding the team in creating an interactive help page product that consolidates all platform features into an intuitive and user-friendly experience. I have trained neural</b> networks</b> and ensemble models to deliver predictive KPIs for supply chain analytics, leveraging MS SQL</b> and data</b> lakes</b> to achieve seamless full-stack integration for data-driven applications. My role also involves demoing features to clients post-sprint to gather actionable feedback and ensure continuous product improvement.
+      </p>
+      <a href="https://tcube.ai/" target="_blank" class="see-product">See Product</a>
+    </div>
+    <div class="horizontal-line"></div>
+
+    <div class="work-item">
+      <div class="company">Merck</div>
+      <div class="role">Voice of Customers Analyst</div>
+      <div class="year">June 2022 - Sep 2022</div>
+      <p class="description">
+        As a <b>Voice of Customers Intern</b> at Merck Group, my first immersion into the corporate world, I gained invaluable experience in understanding customer behavior and iterative design. Collaborating with IT leaders and business executives, I conducted 1:1 interviews to gather actionable insights for enhancing high-budget projects and improving product quality. I co-founded Merck's first-ever Voice of Customers initiative, driving better project management and budget allocation strategies. Using NLP and Tableau, I transformed over 1,000 lines of unstructured survey data into actionable visualizations, enabling data-driven decision-making. This role deepened my appreciation for leveraging AI tools and customer feedback to refine designs and optimize outcomes, setting the foundation for my journey in AI-driven innovation.
+      </p>
+    </div>
+  </section>
+
+  <!-- JavaScript for Scroll Animation -->
+  <script>
+    const workItems = document.querySelectorAll('.work-item');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+
+    workItems.forEach(item => observer.observe(item));
+  </script>
+</body>
+</html>

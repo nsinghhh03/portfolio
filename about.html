@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+
+  <!-- Font Link -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Embedded CSS -->
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: black;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* Back Arrow Button */
+    .back-button {
+      position: fixed;
+      top: 15px;
+      left: 20px;
+      font-size: 2rem;
+      color: white;
+      text-decoration: none;
+      z-index: 1100;
+      transition: color 0.3s;
+    }
+
+    .back-button:hover {
+      color: #6466F1;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      background: black;
+      padding: 15px 0;
+      z-index: 1000;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .navbar li {
+      margin: 0 30px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      font-size: 1.4rem;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #00bfff;
+    }
+
+    /* About Section */
+    .about {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+      padding: 0 20px;
+    }
+
+    .about h1 {
+      font-size: 6rem; /* Larger font for "About Me" */
+      font-weight: 600;
+      margin-bottom: 20px;
+      animation: floatIn 1.5s ease-out forwards;
+    }
+
+    .about p {
+      font-size: 1.2rem; /* Smaller text for paragraphs */
+      font-weight: 400;
+      line-height: 1.8;
+      margin-bottom: 30px;
+      opacity: 0; /* Initially hidden */
+    }
+
+    .about p:nth-child(2) {
+      animation: floatIn 2s ease-out forwards;
+      animation-delay: 0.5s; /* Delays the second paragraph */
+    }
+
+    .about p:nth-child(3) {
+      animation: floatIn 2.5s ease-out forwards;
+      animation-delay: 1s; /* Delays the third paragraph */
+    }
+
+    /* Down Arrow */
+    .down-arrow {
+      font-size: 2rem;
+      color: #6466F1;
+      margin-top: 30px;
+      animation: floatIn 3s ease-out forwards;
+      animation-delay: 1.5s; /* Delays the arrow animation */
+    }
+
+    .down-arrow:hover {
+      color: #8091FF;
+      cursor: pointer;
+    }
+
+       /* Tools Section */
+       .tools-section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .tools-section h2 {
+      font-size: 3rem;
+      font-weight: 600;
+      margin-bottom: 40px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .tool-card {
+      display: flex;
+      align-items: center;
+      background-color: #1a1a1a; /* Very dark grey for cards */
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      max-width: 550px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .tool-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .tool-icon {
+      flex-shrink: 0;
+      width: 60px;
+      height: 60px;
+      margin-right: 20px;
+    }
+
+    .tool-content {
+      text-align: left;
+    }
+
+    .tool-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: white;
+    }
+
+    .tool-description {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #9B9BA0;
+    }
+
+    @keyframes floatIn {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Back Button -->
+  <a href="index.html" class="back-button">&larr;</a>
+
+  <!-- Navbar -->
+  <nav>
+    <ul class="navbar">
+      <li><a href="work.html">Work</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- About Section -->
+  <section class="about">
+    <h1>About Me</h1>
+    <p>
+      Hi, I'm Neeza—a digital creative fueled by curiosity and a love for innovation. As a senior at Boston University majoring in Data Science, I’m passionate about blending technology with creativity to craft unique, meaningful digital experiences. Whether it’s exploring new technologies, designing intuitive solutions, or diving into the art of prediction, I find joy in the endless possibilities that data and creativity bring.
+    </p>
+    <p>
+      Outside of academics, I’m an avid yoga enthusiast, a lover of vibrant flavors in the kitchen, and someone deeply curious about understanding the human experience through my studies in biological anthropology. I’m driven by the belief that every challenge is an opportunity to learn, create, and grow—and I’m excited to continue that journey, one step (or byte) at a time.
+    </p>
+    <div class="down-arrow">⬇</div>
+  </section>
+
+   <!-- Tools Section -->
+   <section class="tools-section">
+    <h2>Tools I use daily</h2>
+
+    <!-- Microsoft Suite -->
+    <div class="tool-card">
+      <img src="img/microsoft.png" alt="Microsoft Suite" class="tool-icon">
+      <div class="tool-content">
+        <h3 class="tool-title">Microsoft Suite</h3>
+        <p class="tool-description">From Excel and Outlook to data pipelines in Azure.</p>
+      </div>
+    </div>
+
+    <!-- Figma -->
+    <div class="tool-card">
+      <img src="img/figma.png" alt="Figma" class="tool-icon">
+      <div class="tool-content">
+        <h3 class="tool-title">Figma</h3>
+        <p class="tool-description">UX/UI design, wireframing, prototyping.</p>
+      </div>
+    </div>
+
+    <!-- Python -->
+    <div class="tool-card">
+      <img src="img/python.png" alt="Python" class="tool-icon">
+      <div class="tool-content">
+        <h3 class="tool-title">Python</h3>
+        <p class="tool-description">Pandas, Numpy, and advanced machine learning techniques.</p>
+      </div>
+    </div>
+
+    <!-- Adobe Creative Cloud -->
+    <div class="tool-card">
+      <img src="img/adobe.png" alt="Adobe Creative Cloud" class="tool-icon">
+      <div class="tool-content">
+        <h3 class="tool-title">Adobe Creative Cloud</h3>
+        <p class="tool-description">Creating vibrant prototypes and honing the craft of video editing.</p>
+      </div>
+    </div>
+
+    <!-- Jira -->
+    <div class="tool-card">
+      <img src="img/jira.png" alt="Jira" class="tool-icon">
+      <div class="tool-content">
+        <h3 class="tool-title">Jira</h3>
+        <p class="tool-description">Managing projects and agile workflows.</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
