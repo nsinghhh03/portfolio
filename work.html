@@ -95,7 +95,8 @@
       font-weight: 600;
       color: white;
       margin: 0;
-      animation: floatUp 1.5s ease-out forwards;
+      animation: floatUp 1.5s ease-out forwards; /* Ensures animation only happens once */
+      animation-fill-mode: forwards; /* Keep final state of animation */
       animation-delay: 0.9s; /* Slight delay for staggered effect */
     }
 
@@ -206,7 +207,7 @@
       <div class="role">Business Architect</div>
       <div class="year">June 2024 - August 2024</div>
       <p class="description">
-        As a <b>Business Architecture Analyst</b> at Accenture Song, I worked on a groundbreaking campaign for a leading client in the food & beverage industry, enabling users to create AI-generated personalized images through DALL-E</b>, which could be shared directly on social media. I helped develop and implement robust data metrics to track the campaign's effectiveness, driving a ~25% increase in social media engagement. Leveraging tools like A/B Testing</b>, Google Analytics</b>, and Looker</b>, I conducted extensive user research to uncover content creation behaviors, translating insights into product features that encouraged user-generated content submissions. Collaborating with creative teams using Adobe Creative Cloud and engineering teams leveraging REST APIs, I ensured seamless integration of user-generated AI content, creating a highly interactive and engaging social media experience.
+        As a <b>Business Architecture Analyst</b> at Accenture Song, I worked on a groundbreaking campaign for a leading client in the food & beverage industry, enabling users to create AI-generated personalized images through DALL-E</b>, which could be shared directly on social media. I helped develop and implement robust data metrics to track the campaign's effectiveness, driving a ~25% increase in social media engagement.
       </p>
     </div>
     <div class="horizontal-line"></div>
@@ -216,7 +217,7 @@
       <div class="role">Product Manager</div>
       <div class="year">December 2022 - Present</div>
       <p class="description">
-        As an <b>AI Product Manager</b> at TCube Inc., I spearheaded the development of a cutting-edge Chatbot tailored for the supply chain technology startup, integrating advanced reinforcement</b> learning</b>, speech</b> recognition</b> algorithms</b>, and NLP</b> capabilities</b>. Leading a team of five, I oversee UI/UX design planning for analytics and help features, and I actively manage wide-scale testing to refine program performance. Currently, I’m guiding the team in creating an interactive help page product that consolidates all platform features into an intuitive and user-friendly experience. I have trained neural</b> networks</b> and ensemble models to deliver predictive KPIs for supply chain analytics, leveraging MS SQL</b> and data</b> lakes</b> to achieve seamless full-stack integration for data-driven applications. My role also involves demoing features to clients post-sprint to gather actionable feedback and ensure continuous product improvement.
+        As an <b>AI Product Manager</b> at TCube Inc., I spearheaded the development of a cutting-edge Chatbot tailored for the supply chain technology startup, integrating advanced reinforcement learning, speech recognition algorithms, and NLP capabilities.
       </p>
       <a href="https://tcube.ai/" target="_blank" class="see-product">See Product</a>
     </div>
@@ -227,24 +228,9 @@
       <div class="role">Voice of Customers Analyst</div>
       <div class="year">June 2022 - Sep 2022</div>
       <p class="description">
-        As a <b>Voice of Customers Intern</b> at Merck Group, my first immersion into the corporate world, I gained invaluable experience in understanding customer behavior and iterative design. Collaborating with IT leaders and business executives, I conducted 1:1 interviews to gather actionable insights for enhancing high-budget projects and improving product quality. I co-founded Merck's first-ever Voice of Customers initiative, driving better project management and budget allocation strategies. Using NLP and Tableau, I transformed over 1,000 lines of unstructured survey data into actionable visualizations, enabling data-driven decision-making. This role deepened my appreciation for leveraging AI tools and customer feedback to refine designs and optimize outcomes, setting the foundation for my journey in AI-driven innovation.
+        As a <b>Voice of Customers Intern</b> at Merck Group, I gained invaluable experience in understanding customer behavior and iterative design.
       </p>
     </div>
   </section>
-
-  <!-- JavaScript for Scroll Animation -->
-  <script>
-    const workItems = document.querySelectorAll('.work-item');
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    });
-
-    workItems.forEach(item => observer.observe(item));
-  </script>
 </body>
 </html>
