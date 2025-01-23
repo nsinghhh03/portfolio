@@ -206,10 +206,10 @@
       box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
     }
 
-    .video-container video {
+    .video-container iframe {
       width: 100%;
-      height: auto;
-      border-radius: 10px;
+      height: 360px;
+      border: none;
     }
 
     @keyframes floatIn {
@@ -242,7 +242,7 @@
   <section class="about">
     <h1>About Me</h1>
     <p>
-      Hi, I'm Neeza—a digital creative fueled by curiosity and a love for innovation. As a senior at Boston University majoring in Data Science, I’m passionate about blending technology with creativity to craft unique, meaningful digital experiences. Whether it’s exploring new technologies, designing products, or researching  the art of predictive models, I find joy in the endless possibilities that data and creativity bring.
+      Hi, I'm Neeza—a digital creative fueled by curiosity and a love for innovation. As a senior at Boston University majoring in Data Science, I’m passionate about blending technology with creativity to craft unique, meaningful digital experiences. Whether it’s exploring new technologies, designing products, or researching the art of predictive models, I find joy in the endless possibilities that data and creativity bring.
     </p>
     <p>
       Outside of academics, I’m an avid yoga enthusiast, a lover of vibrant flavors in the kitchen, and someone deeply curious about understanding the human experience through my studies in biological anthropology. I’m driven by the belief that every challenge is an opportunity to learn, create, and grow. I’m excited to continue that journey, one step (or byte) at a time.
@@ -254,7 +254,6 @@
   <section class="tools-section">
     <h2>Tools I use daily</h2>
     <div class="tool-grid">
-      <!-- Microsoft Suite -->
       <div class="tool-card">
         <img src="img/microsoft.png" alt="Microsoft Suite" class="tool-icon">
         <div class="tool-content">
@@ -262,7 +261,6 @@
           <p class="tool-description">From Excel and Outlook to data pipelines in Azure.</p>
         </div>
       </div>
-      <!-- Figma -->
       <div class="tool-card">
         <img src="img/figma.png" alt="Figma" class="tool-icon">
         <div class="tool-content">
@@ -270,7 +268,6 @@
           <p class="tool-description">UX/UI design, wireframing, prototyping.</p>
         </div>
       </div>
-      <!-- Python -->
       <div class="tool-card">
         <img src="img/python.png" alt="Python" class="tool-icon">
         <div class="tool-content">
@@ -278,7 +275,6 @@
           <p class="tool-description">Pandas, Numpy, PyTorch, and other advanced machine learning techniques.</p>
         </div>
       </div>
-      <!-- Adobe Creative Cloud -->
       <div class="tool-card">
         <img src="img/jira.png" alt="Jira" class="tool-icon">
         <div class="tool-content">
@@ -293,10 +289,7 @@
   <section class="video-projects">
     <h2>Oh, and I also make videos for fun. Here's my latest one:</h2>
     <div class="video-container">
-      <video controls>
-        <source src="The Rise of AI Companionship_.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+      <iframe src="https://www.youtube.com/embed/pkwetxBp62A" allowfullscreen></iframe>
     </div>
   </section>
 </body>
