@@ -84,28 +84,28 @@
     }
 
     .about h1 {
-      font-size: 6rem; /* Larger font for "About Me" */
+      font-size: 6rem;
       font-weight: 600;
       margin-bottom: 20px;
       animation: floatIn 1.5s ease-out forwards;
     }
 
     .about p {
-      font-size: 1.2rem; /* Smaller text for paragraphs */
+      font-size: 1.2rem;
       font-weight: 400;
       line-height: 1.8;
       margin-bottom: 30px;
-      opacity: 0; /* Initially hidden */
+      opacity: 0;
     }
 
     .about p:nth-child(2) {
       animation: floatIn 2s ease-out forwards;
-      animation-delay: 0.5s; /* Delays the second paragraph */
+      animation-delay: 0.5s;
     }
 
     .about p:nth-child(3) {
       animation: floatIn 2.5s ease-out forwards;
-      animation-delay: 1s; /* Delays the third paragraph */
+      animation-delay: 1s;
     }
 
     /* Down Arrow */
@@ -114,7 +114,7 @@
       color: #6466F1;
       margin-top: 30px;
       animation: floatIn 3s ease-out forwards;
-      animation-delay: 1.5s; /* Delays the arrow animation */
+      animation-delay: 1.5s;
     }
 
     .down-arrow:hover {
@@ -122,8 +122,8 @@
       cursor: pointer;
     }
 
-       /* Tools Section */
-       .tools-section {
+    /* Tools Section */
+    .tools-section {
       padding: 50px 20px;
       text-align: center;
     }
@@ -136,16 +136,20 @@
       margin-top: 20px;
     }
 
+    .tool-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
     .tool-card {
       display: flex;
       align-items: center;
-      background-color: #1a1a1a; /* Very dark grey for cards */
+      background-color: #1a1a1a;
       border-radius: 10px;
       padding: 20px;
-      margin-bottom: 20px;
-      max-width: 550px;
-      margin-left: auto;
-      margin-right: auto;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
       transition: transform 0.3s, box-shadow 0.3s;
     }
@@ -179,6 +183,35 @@
       color: #9B9BA0;
     }
 
+    /* Video Projects Section */
+    .video-projects {
+      padding: 50px 20px;
+      background-color: black;
+      text-align: center;
+    }
+
+    .video-projects h2 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    .video-container {
+      position: relative;
+      max-width: 80%;
+      margin: 0 auto;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .video-container video {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
     @keyframes floatIn {
       from {
         opacity: 0;
@@ -209,61 +242,61 @@
   <section class="about">
     <h1>About Me</h1>
     <p>
-      Hi, I'm Neeza—a digital creative fueled by curiosity and a love for innovation. As a senior at Boston University majoring in Data Science, I’m passionate about blending technology with creativity to craft unique, meaningful digital experiences. Whether it’s exploring new technologies, designing intuitive solutions, or diving into the art of prediction, I find joy in the endless possibilities that data and creativity bring.
+      Hi, I'm Neeza—a digital creative fueled by curiosity and a love for innovation. As a senior at Boston University majoring in Data Science, I’m passionate about blending technology with creativity to craft unique, meaningful digital experiences. Whether it’s exploring new technologies, designing products, or researching  the art of predictive models, I find joy in the endless possibilities that data and creativity bring.
     </p>
     <p>
-      Outside of academics, I’m an avid yoga enthusiast, a lover of vibrant flavors in the kitchen, and someone deeply curious about understanding the human experience through my studies in biological anthropology. I’m driven by the belief that every challenge is an opportunity to learn, create, and grow—and I’m excited to continue that journey, one step (or byte) at a time.
+      Outside of academics, I’m an avid yoga enthusiast, a lover of vibrant flavors in the kitchen, and someone deeply curious about understanding the human experience through my studies in biological anthropology. I’m driven by the belief that every challenge is an opportunity to learn, create, and grow. I’m excited to continue that journey, one step (or byte) at a time.
     </p>
     <div class="down-arrow">⬇</div>
   </section>
 
-   <!-- Tools Section -->
-   <section class="tools-section">
+  <!-- Tools Section -->
+  <section class="tools-section">
     <h2>Tools I use daily</h2>
-
-    <!-- Microsoft Suite -->
-    <div class="tool-card">
-      <img src="img/microsoft.png" alt="Microsoft Suite" class="tool-icon">
-      <div class="tool-content">
-        <h3 class="tool-title">Microsoft Suite</h3>
-        <p class="tool-description">From Excel and Outlook to data pipelines in Azure.</p>
+    <div class="tool-grid">
+      <!-- Microsoft Suite -->
+      <div class="tool-card">
+        <img src="img/microsoft.png" alt="Microsoft Suite" class="tool-icon">
+        <div class="tool-content">
+          <h3 class="tool-title">Microsoft Suite</h3>
+          <p class="tool-description">From Excel and Outlook to data pipelines in Azure.</p>
+        </div>
+      </div>
+      <!-- Figma -->
+      <div class="tool-card">
+        <img src="img/figma.png" alt="Figma" class="tool-icon">
+        <div class="tool-content">
+          <h3 class="tool-title">Figma</h3>
+          <p class="tool-description">UX/UI design, wireframing, prototyping.</p>
+        </div>
+      </div>
+      <!-- Python -->
+      <div class="tool-card">
+        <img src="img/python.png" alt="Python" class="tool-icon">
+        <div class="tool-content">
+          <h3 class="tool-title">Python</h3>
+          <p class="tool-description">Pandas, Numpy, PyTorch, and other advanced machine learning techniques.</p>
+        </div>
+      </div>
+      <!-- Adobe Creative Cloud -->
+      <div class="tool-card">
+        <img src="img/jira.png" alt="Jira" class="tool-icon">
+        <div class="tool-content">
+          <h3 class="tool-title">Jira</h3>
+          <p class="tool-description">Managing projects and agile workflows.</p>
+        </div>
       </div>
     </div>
+  </section>
 
-    <!-- Figma -->
-    <div class="tool-card">
-      <img src="img/figma.png" alt="Figma" class="tool-icon">
-      <div class="tool-content">
-        <h3 class="tool-title">Figma</h3>
-        <p class="tool-description">UX/UI design, wireframing, prototyping.</p>
-      </div>
-    </div>
-
-    <!-- Python -->
-    <div class="tool-card">
-      <img src="img/python.png" alt="Python" class="tool-icon">
-      <div class="tool-content">
-        <h3 class="tool-title">Python</h3>
-        <p class="tool-description">Pandas, Numpy, and advanced machine learning techniques.</p>
-      </div>
-    </div>
-
-    <!-- Adobe Creative Cloud -->
-    <div class="tool-card">
-      <img src="img/adobe.png" alt="Adobe Creative Cloud" class="tool-icon">
-      <div class="tool-content">
-        <h3 class="tool-title">Adobe Creative Cloud</h3>
-        <p class="tool-description">Creating vibrant prototypes and honing the craft of video editing.</p>
-      </div>
-    </div>
-
-    <!-- Jira -->
-    <div class="tool-card">
-      <img src="img/jira.png" alt="Jira" class="tool-icon">
-      <div class="tool-content">
-        <h3 class="tool-title">Jira</h3>
-        <p class="tool-description">Managing projects and agile workflows.</p>
-      </div>
+  <!-- Video Projects Section -->
+  <section class="video-projects">
+    <h2>Oh, and I also make videos for fun. Here's my latest one:</h2>
+    <div class="video-container">
+      <video controls>
+        <source src="The Rise of AI Companionship_.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
   </section>
 </body>
