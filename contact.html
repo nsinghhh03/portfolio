@@ -20,6 +20,23 @@
       overflow-x: hidden;
     }
 
+    /* Video Background */
+    #video-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1; /* Puts the video in the background */
+    }
+
+    #background-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
     /* Back Arrow Button */
     .back-button {
       position: fixed;
@@ -40,10 +57,12 @@
     .hero {
       text-align: center;
       padding-top: 20vh; /* Centers vertically */
+      position: relative;
+      z-index: 1; /* Ensures text appears above the video */
     }
 
     .hero h1 {
-      font-size: 10rem; /* Large text for "let's connect" */
+      font-size: 10rem;
       font-weight: 600;
       width: 100%;
       text-transform: lowercase;
@@ -84,6 +103,8 @@
       margin-top: 50px;
       gap: 60px; /* Spacing between contact items */
       font-size: 1.4rem;
+      position: relative;
+      z-index: 1; /* Ensures contact info is above video */
     }
 
     .contact-item {
@@ -110,6 +131,14 @@
   </style>
 </head>
 <body>
+  <!-- Video Background -->
+  <div id="video-container">
+    <video autoplay muted loop id="background-video">
+      <source src="img/space2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
   <!-- Back Button -->
   <a href="index.html" class="back-button">&larr;</a>
 
@@ -136,5 +165,13 @@
       <a href="https://www.linkedin.com/in/neeza-singh-9bb1b51a2/" target="_blank">Click here</a>
     </div>
   </section>
+
+  <!-- JavaScript for Slowing Down Video -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      let video = document.getElementById("background-video");
+      video.playbackRate = 0.7; // Slows down video playback
+    });
+  </script>
 </body>
 </html>

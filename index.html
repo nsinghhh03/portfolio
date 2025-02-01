@@ -15,11 +15,19 @@
       margin: 0;
       padding: 0;
       font-family: 'Quicksand', sans-serif;
-      background-image: url('img/backgroundpic.png');
-      background-size: cover;
-      background-position: center;
       color: white;
       overflow-x: hidden;
+    }
+
+    /* Background Video */
+    #background-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1; /* Ensures it stays behind content */
     }
 
     .container {
@@ -77,7 +85,7 @@
       justify-content: center;
       padding: 8px 20px;
       border-radius: 20px;
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(251, 251, 251, 0.1);
       margin-bottom: 0px; /* Adjusted to align above the name */
       transform: translateY(50px);
     }
@@ -112,12 +120,12 @@
 
     .subtitle {
       font-size: 2rem;
-      color: #9B9BA0;
+      color: white;
       margin-bottom: 40px;
     }
 
     .dynamic-text {
-      color: #9B9BA0;
+      color: white;
       font-weight: 400;
     }
 
@@ -130,16 +138,33 @@
       font-size: 1.2rem;
       font-family: 'Quicksand', sans-serif;
       cursor: pointer;
+      transition: background 0.3s, color 0.3s;
       text-decoration: none;
-      transition: background 0.3s;
     }
 
     .cta-btn:hover {
-      background: rgba(47, 45, 65, 1);
+      background: #6466F1;
     }
   </style>
 </head>
 <body>
+
+  <!-- Background Video -->
+  <video autoplay muted loop id="background-video">
+    <source src="img/space.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<script>
+  // Adjust video speed (1.0 = normal speed, 0.5 = half speed)
+  document.addEventListener("DOMContentLoaded", function() {
+    let video = document.getElementById("background-video");
+    video.playbackRate = 0.7; // Slows down the video playback
+  });
+</script>
+
+
+
   <div class="container">
     <!-- Navbar -->
     <nav>
@@ -157,7 +182,7 @@
         <span class="pulse"></span> Open for Work
       </div>
       <h1 class="main-title">Neeza Singh</h1>
-      <p class="subtitle">I am a... <span class="dynamic-text"></span></p>
+      <p class="subtitle">I am a...<span class="dynamic-text"></span></p>
       <a href="NeezaSingh2025.pdf" target="_blank" class="cta-btn">Download Resume</a>
     </section>
   </div>
@@ -165,7 +190,7 @@
   <!-- Embedded JavaScript -->
   <script>
     // Dynamic Typewriter Effect
-    const roles = ['UI Designer', 'Product Manager', 'AI Enthusiast', 'Teacher', 'Data Scientist'];
+    const roles = ['UI Designer','AI Engineer','Teacher','Data Scientist'];
     let roleIndex = 0;
     let charIndex = 0;
     const dynamicTextElement = document.querySelector('.dynamic-text');
